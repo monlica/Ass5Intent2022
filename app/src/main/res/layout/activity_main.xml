@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/txt_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Page 1"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/txt_regis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee Form"
+        android:layout_below="@id/txt_page"
+        android:textSize="25sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Employee Name"
+        android:layout_below="@id/txt_regis"
+        android:layout_marginTop="12dp">
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_name"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:inputType="textShortMessage"
+                android:textSize="20sp"
+                android:hint=""
+                android:layout_marginTop="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender:"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/txt_name"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/text1">
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textSize="20sp"
+                    android:layout_marginRight="10dp"/>
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textSize="20sp"/>
+            </RadioGroup>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="E-mail"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginTop="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp"/>
+
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_salary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Salary"
+        android:layout_below="@id/txt_email"
+        android:layout_marginTop="12dp">
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_salary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="20dp"
+
+                android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_regis"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Send Data"
+        android:onClick="showResult"
+        android:layout_marginTop="30dp"
+        android:background="#3BFF3E"
+        android:layout_below="@id/txt_salary"
+        android:textAllCaps="false"
+        android:textSize="25sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_reset"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:onClick="resetData"
+        android:layout_below="@id/txt_salary"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:background="#F58696"
+        android:layout_toRightOf="@id/btn_regis"
+        android:textAllCaps="false"
+        android:textSize="25sp"/>
+</RelativeLayout>
